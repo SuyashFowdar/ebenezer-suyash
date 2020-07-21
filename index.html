@@ -1,19 +1,75 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Survey Form</title>
+  </head>
 
-<head>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<title>Survey Form</title>
-</head>
-
-<body>
-	<h1 id="title">freeCodeCamp Survey Form</h1>
-	<p id="description">Thank you for taking the time to help us improve the platform</p>
-	<form id="survey-form">
-		<input type="text" id="name" name="name">
-		<input type="email" id="email" name="email">
-		<input type="number" id="number" name="number">
-	</form>
-</body>
-
+  <body>
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description">
+      Thank you for taking the time to help us improve the platform
+    </p>
+    <form id="survey-form">
+      <label id="name-label" for="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Jane Doe"
+        required
+      />
+      <label id="email-label" for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="something@something.com"
+        required
+      />
+      <label id="number-label" for="number">Number</label>
+      <input
+        type="number"
+        id="number"
+        name="number"
+        min="1"
+        max="200"
+        placeholder="1-200"
+        required
+      />
+      <label for="Month">Select Month</label>
+      <select name="Month" id="dropdown">
+        <option value="dropdown" id="drop">Jan</option>
+        <option value="dropdown2" id="drop">Feb</option>
+      </select>
+      <fieldset>
+        <input type="radio" name="Something" value="1" /> 1
+        <input type="radio" name="Something" value="2" /> 2
+        <input type="radio" name="Something" value="3" /> 3
+      </fieldset>
+      <fieldset>
+        <input type="radio" name="something" value="4" /> 4
+        <input type="radio" name="something" value="5" /> 5
+        <input type="radio" name="something" value="6" /> 6
+      </fieldset>
+      <fieldset>
+        <input type="checkbox" value="checkbox" name="1" /> FrontEnd
+        <input type="checkbox" value="checkbox2" name="1" /> BackEnd
+        <input type="checkbox" value="checkbox3" name="1" /> DataBase
+      </fieldset>
+      <div>
+        <textarea
+          name="textarea"
+          id="textarea"
+          cols="30"
+          rows="10"
+          placeholder="Additional Comments"
+        ></textarea>
+      </div>
+      <div>
+        <button id="submit" type="submit">Submit</button>
+      </div>
+    </form>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
 </html>
